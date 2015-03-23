@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+    <ImageView
+        android:id="@+id/blog_button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:onClick="onActivityClick"
+        android:src="@drawable/a_alpha"
+        android:tag="BlogActivity" />
+
+    <ImageView
+        android:id="@+id/belt_page_button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:onClick="onActivityClick"
+        android:src="@drawable/a_belt"
+        android:tag="BeltPageActivity" />
+
+    <ImageView
+        android:id="@+id/contact_us_button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="200dp"
+        android:onClick="onActivityClick"
+        android:src="@drawable/a_dir"
+        android:tag="ContactUsActivity" />
+
+    <ImageView
+        android:id="@+id/schedule_button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="200dp"
+        android:onClick="onActivityClick"
+        android:src="@drawable/a_calendar"
+        android:tag="BlogActivity" />
+
+    <ImageView
+        android:id="@+id/facebook_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onActivityClick"
+        android:src="@drawable/a_fb"
+        android:tag="FacebookActivity" />
+
+    <ImageView
+        android:id="@+id/twitter_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onActivityClick"
+        android:src="@drawable/a_twitter"
+        android:tag="TwitterActivity" />
+
+    <ImageView
+        android:id="@+id/youtube_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onActivityClick"
+        android:src="@drawable/a_youtube"
+        android:tag="YoutubeActivity" />
+
+</FrameLayout>
