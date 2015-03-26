@@ -2,25 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/DrIce/Documents/gitworkspaces-android/iPitSlo-AndroidStudio/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/DrIce/Documents/gitworkspaces-android/iPitSlo-AndroidStudio/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-3f2308722c3bdd25dce588ae4ad99ea53d9e79e0.jar" />
-    </item>
-    <item
-        jar="/Users/DrIce/Documents/gitworkspaces-android/iPitSlo-AndroidStudio/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jar="/Users/drice1/Documents/ThePitSloAndroidStudio/iPitSlo-AndroidStudio/ipitslo/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/DrIce/Documents/gitworkspaces-android/iPitSlo-AndroidStudio/app/build/intermediates/pre-dexed/debug/classes-8b035c6b63ffd55408bd287863e9c9aeca9ac0ee.jar" />
+        <dex dex="/Users/drice1/Documents/ThePitSloAndroidStudio/iPitSlo-AndroidStudio/ipitslo/build/intermediates/pre-dexed/debug/classes-ee2f507254a335838f4185161449b4548f3d4a30.jar" />
     </item>
     <item
-        jar="/Users/DrIce/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="/Users/drice1/Documents/ThePitSloAndroidStudio/iPitSlo-AndroidStudio/ipitslo/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/drice1/Documents/ThePitSloAndroidStudio/iPitSlo-AndroidStudio/ipitslo/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-1fd8c9055371bf35c1c529e300ca07128bd238c1.jar" />
+    </item>
+    <item
+        jar="/Users/drice1/Documents/devAndroidSDK/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/DrIce/Documents/gitworkspaces-android/iPitSlo-AndroidStudio/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-841859b7ba4f5cfd63f6ebec4d46c8dafb2b15d5.jar" />
+        <dex dex="/Users/drice1/Documents/ThePitSloAndroidStudio/iPitSlo-AndroidStudio/ipitslo/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-cbd76f3c78b48a27c7d35c3daf458891aa46c014.jar" />
     </item>
 
 </items>

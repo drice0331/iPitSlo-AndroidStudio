@@ -1,3 +1,19 @@
+*.iml
+*.orig
+*local.properties
+*override.properties
+*.ipr
+*.iws
+.gradle
+*.idea
+*build
+tmp
+target
+.history
+*target
+*settings
+
+
 build/
 .gradle/
 
