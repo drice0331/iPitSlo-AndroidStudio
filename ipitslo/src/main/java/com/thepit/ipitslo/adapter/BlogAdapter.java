@@ -34,8 +34,8 @@ public class BlogAdapter extends ArrayAdapter<BlogEntry> {
 			holder = new ViewHolder();
 			LayoutInflater infalInflater = (LayoutInflater) this.mContext
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = infalInflater.inflate(R.layout.blog_list_item, null);
-			holder.title = (TextView)convertView.findViewById(R.id.blog_item_title);
+			convertView = infalInflater.inflate(R.layout.base_list_item, null);
+			holder.title = (TextView)convertView.findViewById(R.id.item_title);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder)convertView.getTag();

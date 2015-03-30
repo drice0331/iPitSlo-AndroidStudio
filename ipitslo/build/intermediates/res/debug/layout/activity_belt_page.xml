@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.view.ViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewpager"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+    android:layout_height="match_parent">
 
-</LinearLayout>
-<!-- From: file:/Users/drice1/Documents/ThePitSloAndroidStudio/iPitSlo-AndroidStudio/ipitslo/src/main/res/layout/activity_belt_page.xml -->
+</android.support.v4.view.ViewPager><!-- From: file:/Users/DrIce/Documents/gitworkspaces-android/iPitSlo-AndroidStudio/ipitslo/src/main/res/layout/activity_belt_page.xml -->

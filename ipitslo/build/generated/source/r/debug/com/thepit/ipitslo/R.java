@@ -8,10 +8,14 @@
 package com.thepit.ipitslo;
 
 public final class R {
+    public static final class array {
+        public static final int belt_groups=0x7f040000;
+        public static final int belt_urls=0x7f040001;
+    }
     public static final class attr {
     }
     public static final class color {
-        public static final int red=0x7f040000;
+        public static final int red=0x7f050000;
     }
     public static final class drawable {
         public static final int a_alpha=0x7f020000;
@@ -24,18 +28,19 @@ public final class R {
         public static final int ic_launcher=0x7f020007;
     }
     public static final class id {
-        public static final int belt_page_button=0x7f070004;
-        public static final int blog_button=0x7f070003;
-        public static final int blog_detail_webview=0x7f070001;
-        public static final int blog_item_title=0x7f07000b;
-        public static final int blog_list_view=0x7f070000;
-        public static final int contact_us_button=0x7f070005;
-        public static final int facebook_button=0x7f070007;
-        public static final int fbwebview=0x7f070002;
-        public static final int schedule_button=0x7f070006;
-        public static final int twitter_button=0x7f070008;
-        public static final int twitterwebview=0x7f07000a;
-        public static final int youtube_button=0x7f070009;
+        public static final int belt_page_button=0x7f080005;
+        public static final int blog_button=0x7f080004;
+        public static final int blog_detail_webview=0x7f080002;
+        public static final int blog_list_view=0x7f080001;
+        public static final int contact_us_button=0x7f080006;
+        public static final int facebook_button=0x7f080008;
+        public static final int fbwebview=0x7f080003;
+        public static final int item_title=0x7f08000c;
+        public static final int schedule_button=0x7f080007;
+        public static final int twitter_button=0x7f080009;
+        public static final int twitterwebview=0x7f08000b;
+        public static final int viewpager=0x7f080000;
+        public static final int youtube_button=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_belt_page=0x7f030000;
@@ -47,10 +52,11 @@ public final class R {
         public static final int activity_schedule=0x7f030006;
         public static final int activity_twitter=0x7f030007;
         public static final int activity_youtube=0x7f030008;
-        public static final int blog_list_item=0x7f030009;
+        public static final int base_list_item=0x7f030009;
+        public static final int fragment_belt_page=0x7f03000a;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
+        public static final int app_name=0x7f060000;
     }
     public static final class style {
         /** 
@@ -59,10 +65,10 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
-        public static final int BigTextStyle=0x7f060002;
+        public static final int AppTheme=0x7f070001;
+        public static final int BigTextStyle=0x7f070002;
     }
 }

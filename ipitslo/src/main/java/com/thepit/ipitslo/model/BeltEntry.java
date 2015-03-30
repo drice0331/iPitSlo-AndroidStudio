@@ -7,43 +7,52 @@ import java.io.Serializable;
  */
 public class BeltEntry implements Serializable {
 
-    private String name;
-    private String color;
-    private int progress;
+    private String gsxname;
+    private String gsxcolor;
+    private int gsxprogress;
+    private String gsxinfolink;
 
     public BeltEntry() {
-        name = "";
-        color = "";
-        progress = 0;
+        gsxname = "";
+        gsxcolor = "";
+        gsxprogress = 0;
+        gsxinfolink = "";
     }
 
-    public BeltEntry(String name, String color, int progress) {
+    public BeltEntry(String name, String color, int progress, String infolink) {
         this.setColor(color);
         this.setName(name);
         this.setProgress(progress);
+        this.setInfolink(infolink);
     }
 
     public String getName() {
-        return name;
+        return gsxname;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.gsxname = name;
     }
 
     public String getColor() {
-        return color;
+        return gsxcolor;
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.gsxcolor = color;
     }
     public int getProgress() {
-        return progress;
+        return gsxprogress;
     }
 
     public void setProgress(int progress) {
-        this.progress = progress;
+        this.gsxprogress = progress;
+    }
+    public String getInfolink() {
+        return gsxinfolink;
+    }
+    public void setInfolink(String gsxinfolink) {
+        this.gsxinfolink = gsxinfolink;
     }
 }
 

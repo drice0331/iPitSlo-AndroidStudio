@@ -2,7 +2,6 @@ package com.thepit.ipitslo.ui;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.thepit.ipitslo.R;
@@ -35,9 +34,9 @@ public class BlogActivity extends BaseActivity implements FetchTaskListener<Blog
         mBlogEntries = new ArrayList<BlogEntry>();
 
 		parserKeys = new HashMap<String, String>();
-		parserKeys.put(CoreConstants.DATA_URL, "http://thepitslo.blogspot.com/feeds/posts/default?alt=rss");
-		parserKeys.put(CoreConstants.CLASS_NAME, "com.thepit.ipitslo.model.BlogEntry");
-        parserKeys.put(CoreConstants.PARSER_ITEM_KEY, "item");
+		parserKeys.put(CoreConstants.DATA_URL, CoreConstants.BLOG_URL);
+		parserKeys.put(CoreConstants.CLASS_NAME, CoreConstants.BLOG_ENTRY_CLASS_NAME);
+        parserKeys.put(CoreConstants.PARSER_KEY, CoreConstants.PARSER_ITEM_NAME);
 
 		objectKeys = new HashMap<String, String>();
 		objectKeys.put("field1", "title");

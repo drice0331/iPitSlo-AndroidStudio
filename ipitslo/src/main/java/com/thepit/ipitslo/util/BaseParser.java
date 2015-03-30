@@ -14,10 +14,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import android.net.Uri;
 import android.util.Log;
-
-import com.thepit.ipitslo.model.BlogEntry;
 
 public class BaseParser<T extends Object> {
 
@@ -79,9 +76,6 @@ public class BaseParser<T extends Object> {
         while (eventType != XmlPullParser.END_DOCUMENT) {
             if (eventType == XmlPullParser.START_TAG &&
                 ITEM_KEY.equals(parser.getName())) {
-                //String title = parser.getAttributeValue(null, "title");
-                //String detailLink = parser.getAttributeValue(null, "link");
-
 
 				try {
 					Class clazz = Class.forName(className);
@@ -90,6 +84,12 @@ public class BaseParser<T extends Object> {
                     while(eventType != XmlPullParser.END_TAG || !ITEM_KEY.equals(parser.getName())) {
                         if(objKey.containsValue(parser.getName())) {
                             String fieldName = parser.getName();
+                            /*
+                            Replaces all special chars in field name - meant for xml's using google
+                            spreadsheets since they have contain ":" in their key for values
+                             */
+                            fieldName = fieldName.replace("[-+.^:,]","");
+
                             String fieldValue = parser.nextText();
 
                             Field field;
@@ -99,7 +99,6 @@ public class BaseParser<T extends Object> {
                                 Object objFieldValue = fieldValue;
                                 field.set(item, objFieldValue);
                             } catch (NoSuchFieldException e) {
-                                // TODO Auto-generated catch block
                                 e.printStackTrace();
                             }
                         }
@@ -134,7 +133,7 @@ public class BaseParser<T extends Object> {
     public ArrayList<T> fetchItems(Map<String, String> endpointKey, Map<String, String> objKey) {
         String url = endpointKey.get(CoreConstants.DATA_URL);
         String className = endpointKey.get(CoreConstants.CLASS_NAME);
-        ITEM_KEY = endpointKey.get(CoreConstants.PARSER_ITEM_KEY);
+        ITEM_KEY = endpointKey.get(CoreConstants.PARSER_KEY);
         return downloadItems(url, className, objKey);
     }
 }

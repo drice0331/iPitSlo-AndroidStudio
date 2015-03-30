@@ -1,15 +1,18 @@
 package com.thepit.ipitslo.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
 
 import com.thepit.ipitslo.R;
+import com.thepit.ipitslo.util.CustomWebViewClient;
 
-public class BlogDetailActivity extends Activity {
+import roboguice.inject.InjectView;
 
-    WebView webView;
+public class BlogDetailActivity extends BaseActivity {
+
+    @InjectView(R.id.blog_detail_webview)
+    protected WebView webview;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +21,10 @@ public class BlogDetailActivity extends Activity {
         Intent i = getIntent();
         String url = i.getStringExtra("url");
 
-        webView = (WebView)findViewById(R.id.blog_detail_webview);
-        webView.loadUrl(url);
+        webview.getSettings().setLoadsImagesAutomatically(true);
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.setWebViewClient(new CustomWebViewClient());
+        webview.loadUrl(url);
     }
 
 

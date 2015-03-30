@@ -1,5 +1,14 @@
 <resources>
-
+    <string-array name="belt_urls">
+        <item>https://spreadsheets.google.com/feeds/list/0AsP6lrGC-fRldE43YWxHZGtwOHdiN0UwNU13OHRDRGc/od6/public/values</item>
+        <item>https://spreadsheets.google.com/feeds/list/0AsP6lrGC-fRldFRZTURoUDY3OVhIajl2cFUzUm5relE/od6/public/values</item>
+        <item>https://spreadsheets.google.com/feeds/list/0AsP6lrGC-fRldEd4Wnp2ekxuS21XUlNFNkE2aTRSS2c/od6/public/values</item>
+    </string-array>
+    <string-array name="belt_groups">
+        <item>HK Adults</item>
+        <item>HK Kids</item>
+        <item>BJJ</item>
+    </string-array>
     <string name="app_name">iPit Slo</string>
 
 </resources>

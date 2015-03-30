@@ -1,7 +1,7 @@
 package com.thepit.ipitslo.ui;
 
-import android.app.Activity;
+import roboguice.activity.RoboFragmentActivity;
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends RoboFragmentActivity {
 
 }

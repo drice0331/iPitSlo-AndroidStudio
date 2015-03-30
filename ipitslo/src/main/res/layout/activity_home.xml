@@ -45,7 +45,7 @@
         android:layout_marginTop="200dp"
         android:onClick="onActivityClick"
         android:src="@drawable/a_calendar"
-        android:tag="BlogActivity" />
+        android:tag="ScheduleActivity" />
 
     <ImageView
         android:id="@+id/facebook_button"
