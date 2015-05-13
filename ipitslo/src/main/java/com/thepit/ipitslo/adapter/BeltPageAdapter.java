@@ -38,8 +38,8 @@ public class BeltPageAdapter extends ArrayAdapter<BeltEntry> {
             holder = new ViewHolder();
             LayoutInflater infalInflater = (LayoutInflater) this.mContext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.base_list_item, null);
-            holder.name = (TextView)convertView.findViewById(R.id.item_title);
+            convertView = infalInflater.inflate(R.layout.belt_list_item, null);
+            holder.name = (TextView)convertView.findViewById(R.id.name);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder)convertView.getTag();

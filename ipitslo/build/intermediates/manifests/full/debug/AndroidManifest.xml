@@ -28,6 +28,8 @@
         </activity>
         <activity android:name="com.thepit.ipitslo.ui.BeltPageActivity" >
         </activity>
+        <activity android:name="com.thepit.ipitslo.ui.BeltDetailActivity" >
+        </activity>
         <activity android:name="com.thepit.ipitslo.ui.BlogActivity" >
         </activity>
         <activity android:name="com.thepit.ipitslo.ui.BlogDetailActivity" >

@@ -9,12 +9,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Objects;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import android.util.Log;
+
+import roboguice.util.Ln;
 
 public class BaseParser<T extends Object> {
 
@@ -88,15 +91,23 @@ public class BaseParser<T extends Object> {
                             Replaces all special chars in field name - meant for xml's using google
                             spreadsheets since they have contain ":" in their key for values
                              */
-                            fieldName = fieldName.replace("[-+.^:,]","");
-
+                            Ln.d("fieldname before - " + fieldName);
+                            fieldName = fieldName.replaceAll("[^\\p{Alpha}\\p{Digit}]+", "");
+                            Ln.d("fieldname with char replaced - " + fieldName);
                             String fieldValue = parser.nextText();
 
                             Field field;
                             try {
                                 field = clazz.getDeclaredField(fieldName);
                                 field.setAccessible(true);
-                                Object objFieldValue = fieldValue;
+                                Object objFieldValue;
+                                Ln.d("fieldname type - " + field.getType().toString());
+                                if(fieldName.equals("gsxprogress")) {
+                                    objFieldValue = Integer.valueOf(fieldValue);
+                                } else {
+                                    objFieldValue = fieldValue;
+
+                                }
                                 field.set(item, objFieldValue);
                             } catch (NoSuchFieldException e) {
                                 e.printStackTrace();

@@ -36,6 +36,7 @@ public final class R {
         public static final int facebook_button=0x7f080008;
         public static final int fbwebview=0x7f080003;
         public static final int item_title=0x7f08000c;
+        public static final int name=0x7f08000d;
         public static final int schedule_button=0x7f080007;
         public static final int twitter_button=0x7f080009;
         public static final int twitterwebview=0x7f08000b;
@@ -53,7 +54,8 @@ public final class R {
         public static final int activity_twitter=0x7f030007;
         public static final int activity_youtube=0x7f030008;
         public static final int base_list_item=0x7f030009;
-        public static final int fragment_belt_page=0x7f03000a;
+        public static final int belt_list_item=0x7f03000a;
+        public static final int fragment_belt_page=0x7f03000b;
     }
     public static final class string {
         public static final int app_name=0x7f060000;

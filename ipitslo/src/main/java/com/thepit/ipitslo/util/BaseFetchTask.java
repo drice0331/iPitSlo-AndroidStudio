@@ -6,12 +6,21 @@ import java.util.Map;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
+
+import com.thepit.ipitslo.ui.BeltPageFragment;
 
 public class BaseFetchTask<T extends Object> extends AsyncTask<Map<String, String>, Void, ArrayList<T>> {
 
 	FetchTaskListener<T>listener;
 	Context context;
-	
+    Fragment fragment;
+
+    public BaseFetchTask(BeltPageFragment frag) {
+        this.fragment = frag;
+        this.listener = (FetchTaskListener<T>) frag;
+    }
+
 	public BaseFetchTask(Context listener) {
 		this.context = listener;
 		this.listener = (FetchTaskListener<T>) listener;

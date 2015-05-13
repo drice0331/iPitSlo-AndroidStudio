@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:1:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:1:11
 	package
 		ADDED from AndroidManifest.xml:2:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -13,6 +11,8 @@ ADDED from AndroidManifest.xml:1:1
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:1:11
 uses-sdk
 ADDED from AndroidManifest.xml:6:5
 MERGED from com.android.support:support-v4:21.0.3:15:5
@@ -67,31 +67,35 @@ activity#com.thepit.ipitslo.ui.BeltPageActivity
 ADDED from AndroidManifest.xml:28:9
 	android:name
 		ADDED from AndroidManifest.xml:28:19
-activity#com.thepit.ipitslo.ui.BlogActivity
+activity#com.thepit.ipitslo.ui.BeltDetailActivity
 ADDED from AndroidManifest.xml:30:9
 	android:name
 		ADDED from AndroidManifest.xml:30:19
-activity#com.thepit.ipitslo.ui.BlogDetailActivity
+activity#com.thepit.ipitslo.ui.BlogActivity
 ADDED from AndroidManifest.xml:32:9
 	android:name
 		ADDED from AndroidManifest.xml:32:19
-activity#com.thepit.ipitslo.ui.ContactUsActivity
+activity#com.thepit.ipitslo.ui.BlogDetailActivity
 ADDED from AndroidManifest.xml:34:9
 	android:name
 		ADDED from AndroidManifest.xml:34:19
-activity#com.thepit.ipitslo.ui.ScheduleActivity
+activity#com.thepit.ipitslo.ui.ContactUsActivity
 ADDED from AndroidManifest.xml:36:9
 	android:name
 		ADDED from AndroidManifest.xml:36:19
-activity#com.thepit.ipitslo.ui.FacebookActivity
+activity#com.thepit.ipitslo.ui.ScheduleActivity
 ADDED from AndroidManifest.xml:38:9
 	android:name
 		ADDED from AndroidManifest.xml:38:19
-activity#com.thepit.ipitslo.ui.TwitterActivity
+activity#com.thepit.ipitslo.ui.FacebookActivity
 ADDED from AndroidManifest.xml:40:9
 	android:name
 		ADDED from AndroidManifest.xml:40:19
-activity#com.thepit.ipitslo.ui.YoutubeActivity
+activity#com.thepit.ipitslo.ui.TwitterActivity
 ADDED from AndroidManifest.xml:42:9
 	android:name
 		ADDED from AndroidManifest.xml:42:19
+activity#com.thepit.ipitslo.ui.YoutubeActivity
+ADDED from AndroidManifest.xml:44:9
+	android:name
+		ADDED from AndroidManifest.xml:44:19

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+Base List Item class - meant for Blog and Belt Page ListViews/Adapters for now
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    
+
     <TextView
-        android:id="@+id/blog_item_title"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:textSize="20sp"/>
 
 </RelativeLayout>
-<!-- From: file:/Users/drice1/Documents/ThePitSloAndroidStudio/iPitSlo-AndroidStudio/ipitslo/src/main/res/layout/blog_list_item.xml -->

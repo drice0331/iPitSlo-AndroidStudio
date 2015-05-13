@@ -17,6 +17,7 @@ int id contact_us_button 0x7f080006
 int id facebook_button 0x7f080008
 int id fbwebview 0x7f080003
 int id item_title 0x7f08000c
+int id name 0x7f08000d
 int id schedule_button 0x7f080007
 int id twitter_button 0x7f080009
 int id twitterwebview 0x7f08000b
@@ -32,7 +33,8 @@ int layout activity_schedule 0x7f030006
 int layout activity_twitter 0x7f030007
 int layout activity_youtube 0x7f030008
 int layout base_list_item 0x7f030009
-int layout fragment_belt_page 0x7f03000a
+int layout belt_list_item 0x7f03000a
+int layout fragment_belt_page 0x7f03000b
 int string app_name 0x7f060000
 int style AppBaseTheme 0x7f070000
 int style AppTheme 0x7f070001

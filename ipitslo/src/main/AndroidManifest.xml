@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".ui.BeltPageActivity" >
         </activity>
+        <activity android:name=".ui.BeltDetailActivity" >
+        </activity>
         <activity android:name=".ui.BlogActivity" >
         </activity>
         <activity android:name=".ui.BlogDetailActivity" >

@@ -2,9 +2,8 @@ package com.thepit.ipitslo.ui;
 
 import com.thepit.ipitslo.R;
 import com.thepit.ipitslo.model.BeltEntry;
-import com.thepit.ipitslo.util.BaseFetchTask;
-import com.thepit.ipitslo.util.CoreConstants;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,34 +12,34 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Locale;
 
-import roboguice.inject.InjectView;
 import roboguice.util.Ln;
 
-public class BeltPageActivity extends BaseActivity implements BaseFetchTask.FetchTaskListener<BeltEntry>, BeltPageFragment.Callbacks{
+public class BeltPageActivity extends BaseActivity implements BeltPageFragment.Callbacks{
 
     private ViewPager mViewPager;
-
     private PagerAdapter mPagerAdapter;
-
+    private String [] beltGroupNames;
+/*
     private Map<String, ArrayList<BeltEntry>> beltGroupMap;
     private ArrayList<BeltEntry> beltEntries;
 
     private Map<String, String> parserKeys;
     private Map<String, String> objectKeys;
-
+*/
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_belt_page);
+        init();
         mViewPager = (ViewPager)findViewById(R.id.viewpager);
+        /*
         beltGroupMap = new HashMap<String, ArrayList<BeltEntry>>();
         beltEntries = new ArrayList<BeltEntry>();
         if(savedInstanceState != null) {
 
         }
-
+        */
         FragmentManager fm = getSupportFragmentManager();
         mPagerAdapter = new BeltStatePagerAdapter(fm);
         mViewPager.setAdapter(mPagerAdapter);
@@ -68,11 +67,21 @@ public class BeltPageActivity extends BaseActivity implements BaseFetchTask.Fetc
         });
 	}
 
-    @Override
-    public void onBeltEntrySelected(BeltEntry beltEntry) {
-
+    private void init() {
+        beltGroupNames = getResources().getStringArray(R.array.belt_groups);
     }
 
+    @Override
+    public void onBeltEntrySelected(BeltEntry beltEntry) {
+        Intent intent = new Intent(this, BeltDetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Entry", beltEntry);
+        Ln.d("name - " + beltEntry.getName() + " rank - " + beltEntry.getColor());
+        startActivity(intent);
+    }
+
+
+    /*
     @Override
     public ArrayList<BeltEntry> getBeltEntriesForPosition(int position) {
 
@@ -84,7 +93,8 @@ public class BeltPageActivity extends BaseActivity implements BaseFetchTask.Fetc
         String [] beltgroups = getResources().getStringArray(R.array.belt_groups);
         key = beltgroups[position];
         Ln.d("making sure url is correct " + url);
-        //If belt map doesn't contain list for given key, then retrieve it with FetchTask
+        //If belt map doesn't contain list for given key, then retrieve it with FetchTask.
+        /*
         if(!beltGroupMap.containsKey(key)) {
             parserKeys = new HashMap<String, String>();
             parserKeys.put(CoreConstants.DATA_URL, url);
@@ -106,15 +116,10 @@ public class BeltPageActivity extends BaseActivity implements BaseFetchTask.Fetc
         }
 
         return beltGroupMap.get(key);
-    }
 
-    @Override
-    public void onPostExecute(ArrayList<BeltEntry> itemList) {
-        beltEntries = itemList;
-        mPagerAdapter.notifyDataSetChanged();
-        Ln.d("Belt Entries Post Execute");
-    }
 
+    }
+*/
 
     private class BeltStatePagerAdapter extends FragmentStatePagerAdapter {
 
@@ -130,6 +135,15 @@ public class BeltPageActivity extends BaseActivity implements BaseFetchTask.Fetc
         @Override
         public int getCount() {
             return 3;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            Locale l = Locale.getDefault();
+            if(beltGroupNames != null) {
+                return beltGroupNames[position].toUpperCase(l);
+            }
+            return null;
         }
     }
 }
