@@ -14,6 +14,7 @@ import com.thepit.ipitslo.R;
 import com.thepit.ipitslo.adapter.BeltPageAdapter;
 import com.thepit.ipitslo.model.BeltEntry;
 import com.thepit.ipitslo.model.BlogEntry;
+import com.thepit.ipitslo.model.SingletonListBeltEntry;
 import com.thepit.ipitslo.util.BaseFetchTask;
 import com.thepit.ipitslo.util.BaseParser;
 import com.thepit.ipitslo.util.CoreConstants;
@@ -30,6 +31,7 @@ public class BeltPageFragment extends ListFragment {
     protected ArrayList<BeltEntry> mBeltEntries;
     protected ListView listView;
     protected int position;
+    protected String beltSection;
     private Callbacks mCallbacks;
     protected BeltPageAdapter beltPageAdapter;
 
@@ -71,15 +73,17 @@ public class BeltPageFragment extends ListFragment {
         String [] urls = getResources().getStringArray(R.array.belt_urls);
         String url = urls[position];
         String [] beltgroups = getResources().getStringArray(R.array.belt_groups);
-        String key = beltgroups[position];
+        beltSection = beltgroups[position];
 
         mBeltEntries = new ArrayList<BeltEntry>();
+        mBeltEntries = SingletonListBeltEntry.get().getListFromMap(beltSection);
 
         Map<String, String> parserKeys;
         Map<String, String> objectKeys;
 
         parserKeys = new HashMap<String, String>();
         parserKeys.put(CoreConstants.DATA_URL, url);
+        parserKeys.put(CoreConstants.BELT_SECTION, beltSection);
         parserKeys.put(CoreConstants.CLASS_NAME, CoreConstants.BELT_ENTRY_CLASS_NAME);
         parserKeys.put(CoreConstants.PARSER_KEY, CoreConstants.PARSER_ENTRY_NAME);
 
@@ -88,7 +92,6 @@ public class BeltPageFragment extends ListFragment {
         objectKeys.put("field2", CoreConstants.STUDENT_PROGRESS);
         objectKeys.put("field3", CoreConstants.STUDENT_BELT_COLOR);
         objectKeys.put("field4", CoreConstants.STUDENT_INFO_LINK);
-        mBeltEntries = new ArrayList<BeltEntry>();
 
         new BeltFetchTask().execute(parserKeys, objectKeys);
         ////////////////////////////////////////////////////
@@ -145,6 +148,8 @@ public class BeltPageFragment extends ListFragment {
             return;
         }
 
+        mBeltEntries = SingletonListBeltEntry.get().getListFromMap(beltSection);
+
         //if listtype is all or null, then get entire content list (defaulting to this if null)
         if(mBeltEntries == null) {
             setListAdapter(null);
@@ -159,16 +164,19 @@ public class BeltPageFragment extends ListFragment {
 
         @Override
         protected ArrayList<BeltEntry> doInBackground(Map<String, String>... params) {
+                SingletonListBeltEntry singletonListBeltEntry = SingletonListBeltEntry.get();
                 Map<String, String> dataRetrieveKey = params[0];
                 Map<String, String> objKey = params[1];
                 ArrayList<BeltEntry> list = new BaseParser<BeltEntry>().fetchItems(dataRetrieveKey, objKey);
+                singletonListBeltEntry.addListviewItemList(list, dataRetrieveKey.get(CoreConstants.BELT_SECTION));
                 return list;
         }
 
         @Override
         protected void onPostExecute(ArrayList<BeltEntry> itemList) {
             super.onPostExecute(itemList);
-            mBeltEntries = itemList;
+            //mBeltEntries = itemList;
+
 //            beltPageAdapter = new BeltPageAdapter(getActivity(), android.R.layout.simple_list_item_1, mBeltEntries);
   //          setListAdapter(beltPageAdapter);
             updateAdapter();

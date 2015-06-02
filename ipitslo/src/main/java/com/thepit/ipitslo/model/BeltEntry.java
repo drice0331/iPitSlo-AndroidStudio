@@ -54,6 +54,33 @@ public class BeltEntry implements Serializable {
     public void setInfolink(String gsxinfolink) {
         this.gsxinfolink = gsxinfolink;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 31;
+        int result = 17;
+        result = hash * result + ((gsxname==null) ? 0 : gsxname.hashCode());
+        result = hash * result + ((gsxcolor == null) ? 0 : gsxcolor.hashCode());
+        result = hash * result + gsxprogress;
+        result = hash * result + ((gsxinfolink == null) ? 0 : gsxinfolink.hashCode());
+        return result;
+    }
+
+
+    @Override
+    public String toString() {
+        return ("gsxname: " + gsxname + " gsxcolor: " + gsxcolor + " gsxprogress: " + gsxprogress +
+                " gsxinfolink: " + gsxinfolink);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof BeltEntry){
+            if (((BeltEntry)o).toString().compareTo(this.toString()) == 0)
+                return true;
+        }
+        return false;
+    }
 }
 
 

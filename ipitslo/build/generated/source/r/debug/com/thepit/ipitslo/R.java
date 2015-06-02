@@ -44,18 +44,19 @@ public final class R {
         public static final int youtube_button=0x7f08000a;
     }
     public static final class layout {
-        public static final int activity_belt_page=0x7f030000;
-        public static final int activity_blog=0x7f030001;
-        public static final int activity_blog_detail=0x7f030002;
-        public static final int activity_contact_us=0x7f030003;
-        public static final int activity_facebook=0x7f030004;
-        public static final int activity_home=0x7f030005;
-        public static final int activity_schedule=0x7f030006;
-        public static final int activity_twitter=0x7f030007;
-        public static final int activity_youtube=0x7f030008;
-        public static final int base_list_item=0x7f030009;
-        public static final int belt_list_item=0x7f03000a;
-        public static final int fragment_belt_page=0x7f03000b;
+        public static final int activity_belt_detail=0x7f030000;
+        public static final int activity_belt_page=0x7f030001;
+        public static final int activity_blog=0x7f030002;
+        public static final int activity_blog_detail=0x7f030003;
+        public static final int activity_contact_us=0x7f030004;
+        public static final int activity_facebook=0x7f030005;
+        public static final int activity_home=0x7f030006;
+        public static final int activity_schedule=0x7f030007;
+        public static final int activity_twitter=0x7f030008;
+        public static final int activity_youtube=0x7f030009;
+        public static final int base_list_item=0x7f03000a;
+        public static final int belt_list_item=0x7f03000b;
+        public static final int fragment_belt_page=0x7f03000c;
     }
     public static final class string {
         public static final int app_name=0x7f060000;

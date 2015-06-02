@@ -9,6 +9,8 @@ public class CoreConstants {
 	public static final String CLASS_NAME = "classname";
     public static final String PARSER_KEY = "parseritemkey";
 
+    public static final String BELT_SECTION = "beltsection";//not for parser but would rather place in that map instead of
+
     public static final String PARSER_ITEM_NAME = "item";
     public static final String PARSER_ENTRY_NAME = "entry";
 
